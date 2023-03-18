@@ -24,14 +24,14 @@
 * Задаем цикл через for и проверяем каждый элемент (строку) массива по условию "длина строки меньше либо равна 3 символа". Строки, отвечающие условию, записываются в новый финальный массив, который выводится в терминале:
 19.void ResultArray(string[] arr) 
 20. {
-21.    string[] newArr = new string[arr.Length];
-22.    int count = 0;
-23.    for (int i = 0; i < arr.Length; i++)
+21.   string[] newArr = new string[arr.Length];
+22.   int count = 0;
+23.   for (int i = 0; i < arr.Length; i++)
 24.    {
-25.        if (arr[i].Length <= 3)
-26.        {
-27.            newArr[count] = array1[i];
-28.            count++;
+25.       if (arr[i].Length <= 3)
+26.       {
+27.          newArr[count] = array1[i];
+28.          count++;
 29.        }
 30.    }
 31.    System.Console.WriteLine("[" + string.Join(",", newArr) + "]");

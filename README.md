@@ -12,5 +12,27 @@
 
 ## Решение
 * Просим пользователя ввести с клавиатуры строки через пробел (элементы массива) - строки 1-3
+string stroka = ReadStr("enter an array of strings separated by a space: ");
+string[] array1 = GenerateFirstArray(stroka);
+ResultArray(array1);
 * Преобразуем введенные строки в массив строк - строки 13-17
+string[] GenerateFirstArray(string str) 
+{
+    string[] arr = stroka.Split(' ');
+    return arr;
+}
 * Задаем цикл через for и проверяем каждый элемент (строку) массива по условию "длина строки меньше либо равна 3 символа". Строки, отвечающие условию, записываются в новый финальный массив, который выводится в терминале - строки 19-32.
+void ResultArray(string[] arr) 
+{
+    string[] newArr = new string[arr.Length];
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            newArr[count] = array1[i];
+            count++;
+        }
+    }
+    System.Console.WriteLine("[" + string.Join(",", newArr) + "]");
+}
